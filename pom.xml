@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.axonactive</groupId>
-	<artifactId>dojo</artifactId>
+	<artifactId>company</artifactId>
 	<version>0.1</version>
 	<packaging>war</packaging>
 
@@ -184,7 +184,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>dojo</finalName>
+		<finalName>company</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -303,7 +303,7 @@
 					<replacements>
 						<replacement>
 							<token>https://petstore.swagger.io/v2/swagger.json</token>
-							<value>http://localhost:8080/dojo/swagger/swagger.json</value>
+							<value>http://localhost:8080/company/swagger/swagger.json</value>
 						</replacement>
 						<replacement>
 							<token>deepLinking: true</token>
@@ -318,10 +318,10 @@
 				<artifactId>jacoco-maven-plugin</artifactId>
 				<configuration>
 					<includes>
-						<include>com/axonactive/dojo/**</include>
+						<include>com/axonactive/company/**</include>
 					</includes>
 					<excludes>
-						<exclude>com/axonactive/dojo/base/**</exclude>
+						<exclude>com/axonactive/company/base/**</exclude>
 						<exclude>**/entity/**</exclude>
 						<exclude>**/dto/**</exclude>
 						<exclude>**/constants/**</exclude>
