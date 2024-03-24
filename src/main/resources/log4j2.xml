@@ -30,7 +30,7 @@
     </Appenders>
 
     <Loggers>
-        <Logger name="com.axonactive.dojo" level="info" additivity="false">
+        <Logger name="com.axonactive.company" level="info" additivity="false">
             <AppenderRef ref="dojo" />
             <AppenderRef ref="console" />
         </Logger>
