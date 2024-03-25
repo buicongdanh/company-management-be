@@ -110,10 +110,8 @@ public class EmployeeService {
     }
 
     public List<EmployeeDTO> getActiveEmployees() {
-        List<Employee> employees = this.employeeDAO.findAll();
-        return employees.stream()
+        return employeeMapper.toEmployeeDTOs(this.employeeDAO.findAll().stream()
                 .filter(employee -> employee.getStatus().equals(Status.ACTIVE))
-                .map(employee -> this.employeeMapper.toEmployeeDTO(employee))
-                .collect(Collectors.toList());
+                .toList());
     }
 }
