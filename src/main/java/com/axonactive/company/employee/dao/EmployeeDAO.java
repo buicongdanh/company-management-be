@@ -25,4 +25,8 @@ public class EmployeeDAO extends BaseDAO<Employee> {
         return entityManager.createQuery("select e from Employee e", Employee.class)
                 .getResultList();
     }
+
+    public List<EmployeeDTO> findAllEmployeesWithTotalWorkingHourAndProjects () {
+        return entityManager.createNamedQuery("Employee.findAllEmployeesWithTotalWorkingHourAndProjects", EmployeeDTO.class).getResultList();
+    }
 }

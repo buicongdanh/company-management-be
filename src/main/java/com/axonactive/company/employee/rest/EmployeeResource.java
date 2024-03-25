@@ -40,7 +40,7 @@ public class EmployeeResource {
 
     @GET
     @Produces({MediaType.APPLICATION_JSON})
-    @ApiOperation(value = "Get all employee")
+    @ApiOperation(value = "Get all employee with total number of hours working and total project working")
     @ApiResponses({
             @ApiResponse(
                     code = 200,
@@ -52,8 +52,8 @@ public class EmployeeResource {
                     message = "Server side errors"
             )
     })
-    public Response getAllEmployees() {
-        return Response.ok().entity(this.employeeService.getAllEmployee()).build();
+    public Response getAllEmployeesWithTotalWorkingHourAndTotalProject() {
+        return Response.ok().entity(this.employeeService.getAllEmployeesWithTotalWorkingHourAndTotalProject()).build();
     }
 
     @GET

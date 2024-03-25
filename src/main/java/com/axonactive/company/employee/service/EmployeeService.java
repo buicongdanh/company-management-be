@@ -46,13 +46,8 @@ public class EmployeeService {
                 .build();
     }
 
-    public EmployeeListResponseDTO getAllEmployee() {
-        List<Employee> employees = this.employeeDAO.findAll();
-
-        return EmployeeListResponseDTO
-                .builder()
-                .employees(employeeMapper.toEmployeeDTOs(employees))
-                .build();
+    public List<EmployeeDTO> getAllEmployeesWithTotalWorkingHourAndTotalProject() {
+        return this.employeeDAO.findAllEmployeesWithTotalWorkingHourAndProjects();
     }
 
     public EmployeeDTO findEmployeeById(Long id) throws EntityNotFoundException {
